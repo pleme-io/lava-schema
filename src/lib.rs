@@ -170,7 +170,22 @@ fn validate_bag(
                 }
             }
             Some(field) => {
-                if let Err(e) = field.r#type.validate(value) {
+                // For ListOf fields, the bag carries a comma-joined
+                // string projection (lava-runtime + lava-architectures
+                // both project list bindings that way). Split + run
+                // validate_list so the typed inner check fires.
+                let result = match &field.r#type {
+                    Type::ListOf { .. } => {
+                        let parts: Vec<&str> = if value.is_empty() {
+                            Vec::new()
+                        } else {
+                            value.split(',').collect()
+                        };
+                        field.r#type.validate_list(&parts)
+                    }
+                    _ => field.r#type.validate(value),
+                };
+                if let Err(e) = result {
                     errors.push(SchemaError::TypeMismatch {
                         kind: label,
                         name: name.clone(),
