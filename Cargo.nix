@@ -181,7 +181,7 @@ rec {
       };
       "lava-schema" = rec {
         crateName = "lava-schema";
-        version = "0.1.3";
+        version = "0.1.4";
         edition = "2024";
         src = lib.cleanSourceWith { filter = sourceFilter;  src = ./.; };
         libName = "lava_schema";
@@ -218,13 +218,13 @@ rec {
       };
       "lava-types" = rec {
         crateName = "lava-types";
-        version = "0.1.1";
+        version = "0.1.2";
         edition = "2024";
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/pleme-io/lava-types";
-          rev = "597faa46320f0ff65f9286e60b9cc534b33b2723";
-          sha256 = "166kdi2fq4p2xd37m16q5n10q8vcdpfl1dxvab2gdcyn9g5wvjqa";
+          rev = "16ac0b6c7c33c96e2cf17c0067db94e8633e5062";
+          sha256 = "0p8jxjp2x6am103d23wjk2zwrgd84j09k2ki168vri2rqrp8qwk6";
         };
         libName = "lava_types";
         authors = [
