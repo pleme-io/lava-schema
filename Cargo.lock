@@ -46,7 +46,7 @@ dependencies = [
 [[package]]
 name = "lava-types"
 version = "0.1.2"
-source = "git+https://github.com/pleme-io/lava-types?branch=main#3aa636a8f9e468591097c21ad4513c91326b1fe1"
+source = "git+https://github.com/pleme-io/lava-types?branch=main#1e2b9ee81e00140e12513ff3fad6f074549ec83a"
 dependencies = [
  "serde",
  "thiserror",
