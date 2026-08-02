@@ -46,7 +46,8 @@ dependencies = [
 [[package]]
 name = "lava-types"
 version = "0.1.2"
-source = "git+https://github.com/pleme-io/lava-types?branch=main#5919002fc907fdb0c2c348be5e12ffa08e510430"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "24efeadab0cdecd1a40d322763a205da794def84a1f6e230ba202c40934a20ae"
 dependencies = [
  "serde",
  "thiserror",
