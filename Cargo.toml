@@ -1,7 +1,10 @@
 [package]
 authors = ["pleme-io"]
+categories = ["config", "development-tools"]
 description = "Typed schema protocol for lava architectures. GraphQL-equivalent for infrastructure: every architecture declares a strict interface (typed inputs + typed outputs) other architectures consume by typed query. Loose escape hatches where strictness doesn't apply. Authored in tatara-lisp ((deflava-interface ...)). Powers cross-architecture compile-time composition."
 edition = "2024"
+homepage = "https://github.com/pleme-io/lava-schema"
+keywords = ["schema", "interface", "infrastructure", "iac", "pleme-io"]
 license = "MIT"
 name = "lava-schema"
 readme = "README.md"
